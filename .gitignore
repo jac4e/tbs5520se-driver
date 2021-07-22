@@ -1,1 +1,11 @@
 .DS_Store
+*.o
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+*.order
+*.symvers
+*.ko
+*.o.d
+/bin/*

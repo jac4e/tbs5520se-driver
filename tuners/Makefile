@@ -1,2 +1,2 @@
-obj-y += av201x.o
-obj-y += si2157.o
+obj-m += av201x.o
+obj-m += si2157.o

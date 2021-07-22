@@ -15,7 +15,7 @@
 #ifndef SI2183_H
 #define SI2183_H
 
-#include <linux/dvb/frontend.h>
+#include "../dvb-core/frontend.h"
 /*
  * I2C address
  * 0x64

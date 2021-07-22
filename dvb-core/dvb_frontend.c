@@ -31,7 +31,7 @@
 #include <linux/compat.h>
 #include <asm/processor.h>
 
-#include <media/dvb_frontend.h>
+#include "dvb_frontend.h"
 #include <media/dvbdev.h>
 #include <linux/dvb/version.h>
 
@@ -42,6 +42,7 @@ static int dvb_override_tune_delay;
 static int dvb_powerdown_on_sleep = 1;
 static int dvb_mfe_wait_time = 5;
 
+MODULE_LICENSE("GPL");
 module_param_named(frontend_debug, dvb_frontend_debug, int, 0644);
 MODULE_PARM_DESC(frontend_debug, "Turn on/off frontend core debugging (default:off).");
 module_param(dvb_shutdown_timeout, int, 0644);

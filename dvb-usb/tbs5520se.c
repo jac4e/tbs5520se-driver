@@ -11,9 +11,9 @@
 
 #include <linux/version.h>
 #include "tbs5520se.h"
-#include "si2183.h"
-#include "si2157.h"
-#include "av201x.h"
+#include "../dvb-frontends/si2183.h"
+#include "../tuners/si2157.h"
+#include "../tuners/av201x.h"
 
 #define TBS5520SE_READ_MSG 0
 #define TBS5520SE_WRITE_MSG 1

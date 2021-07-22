@@ -271,8 +271,7 @@ static const struct dvb_tuner_ops av201x_tuner_ops = {
 	.get_rf_strength = av201x_get_rf_strength,
 };
 
-struct dvb_frontend *av201x_attach(struct dvb_frontend *fe,
-		struct av201x_config *cfg, struct i2c_adapter *i2c)
+struct dvb_frontend *av201x_attach(struct dvb_frontend *fe, struct av201x_config *cfg, struct i2c_adapter *i2c)
 {
 	struct av201x_priv *priv = NULL;
 

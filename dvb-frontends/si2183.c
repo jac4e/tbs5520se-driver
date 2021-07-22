@@ -13,7 +13,7 @@
  */
 
 #include "si2183.h"
-#include <media/dvb_frontend.h>
+#include "../dvb-core/dvb_frontend.h"
 #include <linux/firmware.h>
 #include <linux/version.h>
 #include <linux/i2c-mux.h>

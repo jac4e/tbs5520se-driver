@@ -43,7 +43,7 @@
 #include <linux/slab.h>
 #include <linux/bitops.h>
 
-#include <linux/dvb/frontend.h>
+#include "frontend.h"
 
 #include <media/dvbdev.h>
 

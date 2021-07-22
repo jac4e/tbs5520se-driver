@@ -17,12 +17,12 @@
 #include <linux/mutex.h>
 #include <media/rc-core.h>
 
-#include <media/dvb_frontend.h>
+#include "../dvb-core/dvb_frontend.h"
 #include <media/dvb_demux.h>
 #include <media/dvb_net.h>
 #include <media/dmxdev.h>
 
-#include "dvb-pll.h"
+#include "../dvb-frontends/dvb-pll.h"
 
 #include <media/dvb-usb-ids.h>
 

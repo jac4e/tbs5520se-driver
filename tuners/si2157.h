@@ -9,7 +9,7 @@
 #define SI2157_H
 
 #include <media/media-device.h>
-#include <media/dvb_frontend.h>
+#include "../dvb-core/dvb_frontend.h"
 
 /*
  * I2C address
