@@ -1,0 +1,11 @@
+--- A_Makefile	2021-08-11 18:05:25.582616826 +0100
++++ B_Makefile	2021-08-11 18:05:59.142354454 +0100
+@@ -118,7 +118,7 @@
+ # exist, it will have dependency information in it, and only be rebuilt
+ # when necessary.
+ Makefile.media:
+-	scripts/make_makefile.pl
++#	scripts/make_makefile.pl
+ 
+ #################################################
+ # CFLAGS configuration
