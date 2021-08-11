@@ -1,10 +1,20 @@
 # Instructions
 
-1. Install required dependecies
+## Preface
 
-   ```
-   sudo apt install git patchutils libproc-processtable-perl
-   ```
+These instructions were made using a fresh copy of 2020-08-20-raspios-buster-armhf-lite.img with kernel 5.4.51
+
+It should work on newer kernel versions, the patch files might need to be updated to account for additional unneeded drivers stopping the build process from completing.
+For kernel 5.10.52 this may be the saa7146 driver.
+
+## Steps
+
+1. Install required dependencies
+
+    ```
+    sudo apt update
+    sudo apt install git patchutils libproc-processtable-perl
+    ```
 
 2. Install kernel headers
    - Kernel headers for 5.4.51-v7l+
@@ -20,26 +30,33 @@
     sudo apt install raspberry-kernel-headers
     ```
 
-3. Download the media_build repository
+3. Clone this repository
 
-   ```
-   git clone --depth=1 --single-branch https://github.com/tbsdtv/media_build.git
-   ```
+    ```
+    git clone --depth=1 --single-branch https://github.com/jac4e/tbs5520se-driver.git
+    cd tbs5520se-driver/
+    ```
 
-4. Run the build script to generate the Makefiles
+4. Download the media_build repository
 
-   ```
-   cd media_build/
-   ./build
-   ```
+    ```
+    git clone --depth=1 --single-branch https://github.com/tbsdtv/media_build.git
+    ```
+
+5. Run the build script to generate the Makefiles
+
+    ```
+    cd media_build/
+    ./build
+    ```
 
    NOTE: Cancel the build script when the following line is printed to the console
 
-   ```
-   make[2]: Entering directory '/usr/src/linux-headers-5.4.51-v7l+
-   ```
+    ```
+    make[2]: Entering directory '/usr/src/linux-headers-5.4.51-v7l+
+    ```
 
-5. Apply the Makefile patches
+6. Apply the Makefile patches
 
     ```
     cd ..
@@ -47,20 +64,20 @@
     patch -u media_build/v4l/Makefile.media -i Makefile.media.patch
     ```
 
-6. Run the build script, letting it complete this time
+7. Run the build script, letting it complete this time
 
     ```
     cd media_build/
     ./build
     ```
 
-7. If the build process finished successfully install the drivers.
+8.  If the build process finished successfully install the drivers.
 
     ```
     sudo make install
     ```
 
-8. Finally, install the firmware and reboot
+9.  Finally, install the firmware and reboot
 
     ```
     wget http://www.tbsdtv.com/download/document/linux/tbs-tuner-firmwares_v1.0.tar.bz2
